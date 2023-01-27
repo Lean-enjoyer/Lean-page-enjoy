@@ -1,1 +1,1 @@
-# https://lean-enjoyer.github.io/test/index.html
+# https://lean-enjoyer.github.io/test/
