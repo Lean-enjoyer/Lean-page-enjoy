@@ -26,6 +26,10 @@ body {
 
 
 
+body {
+  text-align: center;
+}
+
 .dropdown {
   display: inline-block;
 }
@@ -58,7 +62,7 @@ body {
   margin-top: 10px;
 }
 
-nav a:hover .dropdown-content {
+nav:hover .dropdown-content {
   display: block;
 }
 
@@ -66,20 +70,19 @@ nav a:hover .dropdown-content {
   border-radius: 10px;
 }
 
-.dropdown {
+nav {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background-color: #333333;
   padding: 20px;
   margin-bottom: 10px;
 }
 
-.dropdown a {
+nav {
   color: white;
   text-decoration: none;
   padding: 10px;
-  text-align: center;
-  
 }
 
 .dropdown-content a {
@@ -162,6 +165,25 @@ nav a:hover {
     animation-timing-function: linear; 
 }
 
+.image-slider {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.image-slider-inner {
+    animation: slide 10s linear infinite;
+}
+
+@keyframes slide {
+    from { transform: translateX(125%); }
+    to { transform: translateX(-80%); }
+}
+
+.image-slider img {
+    height: 200px;
+    margin-right: 500px;
+}
+
 
 </style>
 </head>
@@ -189,10 +211,15 @@ nav a:hover {
 	<source src="Film.mp4" type="video/mp4">
   	<source src="Film.ogg" type="video/ogg">
 </video>
-</section>
 
 
-
+<div class="image-slider">
+    <div class="image-slider-inner">
+        <img src="samolot.png" alt="Image 1">
+        <img src="samolot.png" alt="Image 2">
+        <img src="samolot.png" alt="Image 3">
+    </div>
+</div>
 
 </div>
 <div class="footer">

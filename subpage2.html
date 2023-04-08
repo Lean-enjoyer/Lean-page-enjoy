@@ -22,12 +22,75 @@ body {
   background-color: #f0f0f0;
 }
 
+body {
+  text-align: center;
+}
+
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown {
+  position: center;
+  display: inline-block;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 2px;
+}
+
+.dropdown-content {
+  display: none;
+  position: center;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: center;
+  z-index: 1;
+  background-color: #f1f1f1;
+  transition: all 0,3s ease-in-out;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+nav:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content {
+  border-radius: 10px;
+}
+
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #333333;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+nav {
+  color: white;
+  text-decoration: none;
   padding: 10px;
+}
+
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+  
+}
+
+nav a:hover {
+  background-color: #807e7e;
+  border-radius: 10px;
 }
 
 nav a {
@@ -57,7 +120,7 @@ nav a:hover {
 }
 
 .subpage img {
-  width: 200px;
+  width: 350px;
   height: auto;
 }
 
@@ -71,22 +134,70 @@ align-items:center;justify-content:center;background-color:#333333;color:white;p
   height: auto;
 }
 
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+.subpage img:hover {
+    animation-name: spin; 
+    animation-duration: .5s; 
+    animation-iteration-count: infinite; 
+    animation-timing-function: linear; 
+}
+
+.image-slider {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.image-slider-inner {
+    animation: slide 10s linear infinite;
+}
+
+@keyframes slide {
+    from { transform: translateX(125%); }
+    to { transform: translateX(-80%); }
+}
+
+.image-slider img {
+    height: 200px;
+    margin-right: 500px;
+}
+
 </style>
 </head>
 <body>
+
 <nav>
-<a href="subpage1.html">Strony</a>
-<a href="index.html">Strona główna</a>
-<a href="subpage2.html">Projekty</a>
+  <div class="dropdown">
+    <a>Menu</a>
+    <div class="dropdown-content">
+      <a href="subpage1.html">Strony</a>
+      <a href="index.html">Strona główna</a>
+      <a href="subpage2.html">Projekty</a>
+    </div>
+  </div>
 </nav>
+
 <div class="subpage">
 <h2>Projekty</h2>
 <p>To jest przykładowa podstrona.</p>
 <p>Projekty filmów, zdjęć, stron, aplikacji itp.</p>
 <img src="Logo.png" alt="Logo">
 </div>
+
+<div class="image-slider">
+    <div class="image-slider-inner">
+        <img src="samolot.png" alt="Image 1">
+        <img src="samolot.png" alt="Image 2">
+        <img src="samolot.png" alt="Image 3">
+    </div>
+</div>
+
 <div class="footer">
 <p>&copy; Lean-Enjoyer</p>
 </div>
+
 </body>
 </html>
