@@ -7,6 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="styles.css">
   <title>Lean-Enjoyer</title>
+  <title>Zmiana motywu</title>
+  <link rel="stylesheet" id="theme-link">
   
 <style>
 * {
@@ -17,7 +19,6 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
 }
 
 body {
@@ -153,6 +154,21 @@ nav a:hover {
     margin-right: 500px;
 }
 
+button {
+    background-color: #333333;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+}
+
+button:hover {
+    background-color: #807e7e;
+}
 
 </style>
 </head>
@@ -174,6 +190,26 @@ nav a:hover {
 <p>To jest przykładowa podstrona.</p>
 <img src="Logo.png" alt="Lean-Enjoyer">
 </div>
+
+<div>
+
+ <button onclick="changeTheme()">Zmień motyw</button>
+
+    <script>
+        let theme = "light";
+
+        const themeLink = document.getElementById("theme-link");
+
+        function changeTheme() {
+            if (theme === "light") {
+                theme = "dark";
+                themeLink.setAttribute("href", "dark.css");
+            } else {
+                theme = "light";
+                themeLink.setAttribute("href", "light.css");
+            }
+        }
+    </script>
 
 <div class="image-slider">
     <div class="image-slider-inner">
