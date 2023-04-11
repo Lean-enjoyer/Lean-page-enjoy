@@ -10,6 +10,8 @@
   <title>Lean-Enjoyer</title>
   <meta name="keywords" content="tutaj_wpisz_swoje_słowa_kluczowe">
   <meta name="keywords" content="strona internetowa, Lean-Enjoyer, 30192834, CSS, JavaScript, Enjoy, przykładowa strona, L page">
+  <title>Zmiana motywu</title>
+  <link rel="stylesheet" id="theme-link">
   
 <style>
 * {
@@ -22,7 +24,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background-colohr: #f0f0f0;
   
 }
 
@@ -186,6 +188,22 @@ nav a:hover {
     margin-right: 500px;
 }
 
+button {
+    background-color: #333333;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+}
+
+button:hover {
+    background-color: #807e7e;
+}
+
 
 </style>
 </head>
@@ -215,8 +233,27 @@ nav a:hover {
 </video>
 
 <div class="formularz">
-   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScxyJq6cU59R7h8sqordR8RC16cgUptl6NEsF-hQ5mxVqe1UA/viewform?embedded=true" width="1000" height="1333" frameborder="0" marginheight="0" marginwidth="0">Ładuję…</iframe>
+   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScxyJq6cU59R7h8sqordR8RC16cgUptl6NEsF-hQ5mxVqe1UA/viewform?embedded=true" width="1" height="1" frameborder="0" marginheight="0" marginwidth="0">Ładuję…</iframe>
 </div>
+
+
+    <button onclick="changeTheme()">Zmień motyw</button>
+
+    <script>
+        let theme = "light";
+
+        const themeLink = document.getElementById("theme-link");
+
+        function changeTheme() {
+            if (theme === "light") {
+                theme = "dark";
+                themeLink.setAttribute("href", "dark.css");
+            } else {
+                theme = "light";
+                themeLink.setAttribute("href", "light.css");
+            }
+        }
+    </script>
 
 <div class="image-slider">
     <div class="image-slider-inner">

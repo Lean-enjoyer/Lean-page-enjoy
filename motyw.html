@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zmiana motywu</title>
+    <link rel="stylesheet" id="theme-link">
+</head>
+<body>
+    
+    <button onclick="changeTheme()">Zmień motyw</button>
+
+    <script>
+        let theme = "light";
+
+        const themeLink = document.getElementById("theme-link");
+
+        function changeTheme() {
+            if (theme === "light") {
+                theme = "dark";
+                themeLink.setAttribute("href", "dark.css");
+            } else {
+                theme = "light";
+                themeLink.setAttribute("href", "light.css");
+            }
+        }
+    </script>
+</body>
+</html>
